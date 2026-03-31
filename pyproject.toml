@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "nsl_toolbox"
+version = "0.1.0"
+description = "Python implementation of the NSL Auditory Cortical Model toolbox"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20",
+    "scipy>=1.7",
+]
+
+[tool.setuptools.packages.find]
+include = ["nsl_toolbox*"]
+
+[tool.setuptools.package-data]
+nsl_toolbox = ["*.npy"]
